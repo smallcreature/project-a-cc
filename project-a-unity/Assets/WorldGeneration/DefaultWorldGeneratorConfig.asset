@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 819b20b95e6837e43833cd5af0c0f3d9, type: 3}
+  m_Name: DefaultWorldGeneratorConfig
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectArcane.WorldGeneration.WorldGeneratorConfig
+  seed: 12345
+  chunkCountX: 32
+  chunkCountZ: 32
+  stageToggles:
+    Continentalness: 1
+    Erosion: 0
+    PeaksAndValleys: 0
+    CliffsAndOverhangs: 0
+    Caves: 0
+  biomes:
+  - name: Default
+    biomeId: 0
+    debugColor:
+      serializedVersion: 2
+      rgba: 4284131920
+    mapWeight: 1
+    mapThreshold: 0.55
+    mapBlend: 0.12
+    mapNoise:
+      enabled: 1
+      intensity: 1
+      contrast: 1
+      size: 420
+      octaves: 3
+      persistence: 0.5
+      lacunarity: 2
+      seedOffset: 11
+    baseHeight: 128
+    stoneBlockId: 1
+    soilBlockId: 2
+    grassBlockId: 3
+    soilDepthRange: {x: 3, y: 5}
+    steepnessThreshold: 10
+    heightNoise:
+      enabled: 1
+      intensity: 22
+      contrast: 1
+      size: 180
+      octaves: 4
+      persistence: 0.5
+      lacunarity: 2
+      seedOffset: 101
+    continentalnessNoise:
+      enabled: 1
+      intensity: 1
+      contrast: 1
+      size: 80
+      octaves: 2
+      persistence: 0.5
+      lacunarity: 2
+      seedOffset: 151
+    continentalnessSpline:
+      points:
+      - Input: -1
+        Output: -42
+      - Input: -0.15
+        Output: -12
+      - Input: 0.35
+        Output: 22
+      - Input: 1
+        Output: 72
+    erosionNoise:
+      enabled: 1
+      intensity: 1
+      contrast: 1
+      size: 300
+      octaves: 3
+      persistence: 0.5
+      lacunarity: 2
+      seedOffset: 211
+    erosionSpline:
+      points:
+      - Input: -1
+        Output: 16
+      - Input: 0
+        Output: 0
+      - Input: 1
+        Output: -24
+    peaksAndValleysNoise:
+      enabled: 1
+      intensity: 18
+      contrast: 1
+      size: 240
+      octaves: 4
+      persistence: 0.5
+      lacunarity: 2
+      seedOffset: 271
+    cliffsAndOverhangsNoise:
+      enabled: 1
+      intensity: 18
+      contrast: 1
+      size: 90
+      octaves: 3
+      persistence: 0.5
+      lacunarity: 2
+      seedOffset: 331
+    caves:
+      enabled: 1
+      cheeseNoise:
+        enabled: 1
+        intensity: 1
+        contrast: 0.28
+        size: 80
+        octaves: 2
+        persistence: 0.5
+        lacunarity: 2
+        seedOffset: 401
+      spaghettiNoise:
+        enabled: 1
+        intensity: 1
+        contrast: 1
+        size: 42
+        octaves: 2
+        persistence: 0.5
+        lacunarity: 2
+        seedOffset: 503
+      cheeseThreshold: -0.71
+      spaghettiCenter: 0
+      spaghettiWidth: 0.08
+      minY: 8
+      maxY: 120

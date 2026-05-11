@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4527251041176016011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e01cacdd48fefd4bbe8552e2fffa655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectArcane.WorldGeneration.BlockDefinition
+  stableId: 3
+  stableKey: grass
+  defaultLayer: 1
+  debugColor:
+    serializedVersion: 2
+    rgba: 4283078220
+  solid: 1
+--- !u!114 &-3901363348063644647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e01cacdd48fefd4bbe8552e2fffa655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectArcane.WorldGeneration.BlockDefinition
+  stableId: 2
+  stableKey: soil
+  defaultLayer: 1
+  debugColor:
+    serializedVersion: 2
+    rgba: 4281619060
+  solid: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 312870b4649ce31429839c7c8984ca69, type: 3}
+  m_Name: DefaultBlockRegistry
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectArcane.WorldGeneration.BlockRegistry
+  blocks:
+  - {fileID: 6970612704186827363}
+  - {fileID: -3901363348063644647}
+  - {fileID: -4527251041176016011}
+--- !u!114 &6970612704186827363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e01cacdd48fefd4bbe8552e2fffa655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectArcane.WorldGeneration.BlockDefinition
+  stableId: 1
+  stableKey: stone
+  defaultLayer: 1
+  debugColor:
+    serializedVersion: 2
+    rgba: 4286347638
+  solid: 1
