@@ -209,7 +209,7 @@ Material:
     - _BaseSSSAOInfluence: 0.8
     - _BaseSSSAmbiet: 0.1
     - _BaseSSSDirect: 0.2
-    - _BaseSSSIntensity: 11.5
+    - _BaseSSSIntensity: 10
     - _BaseSSSNormalDistortion: 0
     - _BaseSSSScattering: 20
     - _BaseSSSShadow: 0.95
@@ -264,7 +264,7 @@ Material:
     - _FlipNormals: 0
     - _Float0: -6.39
     - _Float1: 2
-    - _Float12: 2.34
+    - _Float12: 0.1
     - _Float2: 0.5
     - _Float4: 9.12
     - _Float7: 0.62
@@ -332,6 +332,7 @@ Material:
     - _TopLayerRoughnessIntensity: 1
     - _TopLayerSSSIntensity: 1
     - _TopLayerSmoothness: 0
+    - _TopLayerSmoothnessIntensity: 0
     - _TopLayerUVScale: 6.2
     - _TopNoiseUVScale: 1
     - _TopNormalIntensity: 1
@@ -348,7 +349,6 @@ Material:
     - _TransStrength: 20.1
     - _TransStrength1: 0
     - _Translucency: 5
-    - _TransmissionShadow: 0.5
     - _UVSec: 0
     - _WPOAAmplitude: -1.66
     - _WPOAObjectStiffness: 1
@@ -373,15 +373,11 @@ Material:
     - _WindTreeScale: 0.5
     - _WindTreeSpeed: 5
     - _ZWrite: 1
-    - __dirty: 0
-    - _awdawdad: 0
-    - _render_coverage: 0
-    - _render_cull: 0
-    - _render_zw: 0
+    - __dirty: 1
     m_Colors:
     - _AAAA: {r: 0, g: 1, b: 0, a: 0}
     - _Axis: {r: 1, g: 0, b: 0, a: 0}
-    - _BaseAlbedoColor: {r: 0.50980395, g: 0.21960784, b: 0.08235294, a: 1}
+    - _BaseAlbedoColor: {r: 0.50980395, g: 0.22108312, b: 0.08235293, a: 1}
     - _BaseAlbedoColor1: {r: 0.8679245, g: 0.25792095, b: 0.25792095, a: 0.5019608}
     - _BaseAlbedoColor2: {r: 0.14126332, g: 0.37123778, b: 0.16202943, a: 1}
     - _BaseBottomColor: {r: 1, g: 0, b: 0, a: 0}

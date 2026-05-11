@@ -206,7 +206,7 @@ Material:
     - _BaseSSSShadow: 1
     - _BaseSmoothness: 0.5
     - _BaseSmoothnessIntensity: 0.6
-    - _BaseSmoothnessMax: 0.5
+    - _BaseSmoothnessMax: 0.6
     - _BaseSmoothnessMin: 0
     - _BaseTreeAOIntensity: 0.6
     - _BaseUVScale: 1

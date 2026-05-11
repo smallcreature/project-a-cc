@@ -170,11 +170,13 @@ Material:
     - _BaseRoughnessIntensity: 1
     - _BaseRoughnessOffset: 1.1
     - _BaseSmoothness: 0.2
+    - _BaseSmoothnessAA: 0.5
     - _BaseSmoothnessIntensity: 0.5
     - _BaseSmoothnessMax: 1
     - _BaseSmoothnessMin: 0
     - _BaseSmoothnessOffset: 0.1
-    - _BaseSmoothnessWaves: 0.2
+    - _BaseSmoothnessVColorMask: 0
+    - _BaseSmoothnessWaves: 0.1
     - _BaseUVScale: 1
     - _BottomColorContrast: 3
     - _BottomColorOffset: 2.53
@@ -195,6 +197,7 @@ Material:
     - _EnableBottomColor: 1
     - _EnableDetail: 0
     - _EnableDetail1: 0
+    - _EnableSmoothnessAnim: 0
     - _EnableSmoothnessWaves: 1
     - _EnableTintColor: 1
     - _EnableTintVariationColor: 0

@@ -181,11 +181,13 @@ Material:
     - _BaseSSSAOInfluence: 0.5
     - _BaseSSSIntensity: 1
     - _BaseSmoothness: 0.5
+    - _BaseSmoothnessAA: 0
     - _BaseSmoothnessIntensity: 0.1
-    - _BaseSmoothnessMax: 1
+    - _BaseSmoothnessMax: 0.33
     - _BaseSmoothnessMin: 0
-    - _BaseSmoothnessOffset: 0.5
-    - _BaseSmoothnessWaves: 0.5
+    - _BaseSmoothnessOffset: 0
+    - _BaseSmoothnessVColorMask: 0.358
+    - _BaseSmoothnessWaves: 0
     - _BaseTreeAOIntensity: 0.5
     - _BaseUVScale: 1
     - _BottomColorContrast: 3
@@ -212,6 +214,7 @@ Material:
     - _EnableGlancingAngleCut: 0
     - _EnableGradientColor: 0
     - _EnableSecondColor: 0
+    - _EnableSmoothnessAnim: 0
     - _EnableSmoothnessWaves: 0
     - _EnableTintColor: 1
     - _EnableTintVariationColor: 0

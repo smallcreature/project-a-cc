@@ -170,11 +170,11 @@ Material:
     - _BaseRoughnessIntensity: 1
     - _BaseRoughnessOffset: 1.1
     - _BaseSmoothness: 0.2
-    - _BaseSmoothnessIntensity: 0.5
+    - _BaseSmoothnessIntensity: 0.2
     - _BaseSmoothnessMax: 1
     - _BaseSmoothnessMin: 0
     - _BaseSmoothnessOffset: 0.1
-    - _BaseSmoothnessWaves: 0.2
+    - _BaseSmoothnessWaves: 0.1
     - _BaseUVScale: 1
     - _BottomColorContrast: 2.6
     - _BottomColorOffset: 1.2

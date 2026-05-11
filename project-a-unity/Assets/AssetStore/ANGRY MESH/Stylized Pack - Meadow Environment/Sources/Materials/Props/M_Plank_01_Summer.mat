@@ -151,8 +151,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaCutoff: 0.5
-    - _BaseAOIntensity: 0.5
-    - _BaseAlbedoBrightness: 0.8
+    - _BaseAOIntensity: 0.491
+    - _BaseAlbedoBrightness: 1
     - _BaseAlbedoDesaturation: 0
     - _BaseEmissiveIntensity: 2
     - _BaseEmissiveMaskContrast: 2

@@ -90,6 +90,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _ASDASD: 1.8
+    - _AddPrecomputedVelocity: 1
     - _AlphaCutoff: 0.5
     - _BlendOp: 0
     - _BumpScale: 1
@@ -147,3 +148,4 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

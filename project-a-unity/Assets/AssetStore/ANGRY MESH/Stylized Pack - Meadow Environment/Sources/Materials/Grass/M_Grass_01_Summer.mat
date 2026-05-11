@@ -17,6 +17,7 @@ Material:
   - _ENABLETINTVARIATIONCOLOR_ON
   - _ENABLEWIND_ON
   m_InvalidKeywords:
+  - _ENABLESMOOTHNESSANIM_ON
   - _ENABLETINTCOLOR_ON
   - _ENABLETOPLAYERBLEND_ON
   - _ENABLETOPLAYER_ON
@@ -157,6 +158,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AddPrecomputedVelocity: 1
     - _AlphaCutoff: 0.5
     - _BaseAOIntensity: 0.491
     - _BaseAlbedoBrightness: 1
@@ -170,12 +172,14 @@ Material:
     - _BaseRoughness: 0
     - _BaseRoughnessIntensity: 1
     - _BaseRoughnessOffset: 1.1
-    - _BaseSmoothness: 1.06
+    - _BaseSmoothness: 0.2
+    - _BaseSmoothnessAA: 0.5
     - _BaseSmoothnessIntensity: 1
-    - _BaseSmoothnessMax: 2
+    - _BaseSmoothnessMax: 1
     - _BaseSmoothnessMin: 0
     - _BaseSmoothnessOffset: 0.1
-    - _BaseSmoothnessWaves: 0.2
+    - _BaseSmoothnessVColorMask: 0
+    - _BaseSmoothnessWaves: 0.1
     - _BaseUVScale: 1
     - _BottomColorContrast: 1
     - _BottomColorOffset: 2.73
@@ -200,6 +204,7 @@ Material:
     - _EnableDetail: 0
     - _EnableDetail1: 0
     - _EnableFlipNormals: 0
+    - _EnableSmoothnessAnim: 1
     - _EnableSmoothnessWaves: 1
     - _EnableTintColor: 1
     - _EnableTintVariationColor: 1
@@ -277,3 +282,4 @@ Material:
     - _Vector0: {r: -0.56, g: 3.49, b: 0, a: 0}
     - _Vector1: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

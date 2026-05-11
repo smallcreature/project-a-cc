@@ -153,8 +153,6 @@ Material:
     m_Floats:
     - _AlphaCutoff: 0.5
     - _BaseAOIntensity: 0.5
-    - _BaseAlbedoBrightness: 1
-    - _BaseAlbedoDesaturation: 0
     - _BaseEmissiveIntensity: 2
     - _BaseEmissiveMaskContrast: 2
     - _BaseMetallicIntensity: 0
@@ -162,8 +160,6 @@ Material:
     - _BaseRoughnessIntensity: 1
     - _BaseSmoothness: 0.5
     - _BaseSmoothnessIntensity: 1
-    - _BaseSmoothnessMax: 1
-    - _BaseSmoothnessMin: 0
     - _BaseUVScale: 13.4
     - _BumpScale: 1
     - _BumpScale1: 1
@@ -210,10 +206,7 @@ Material:
     - _TopLayerOffset: 0.4
     - _TopLayerRoughnessIntensity: 1
     - _TopLayerSmoothnessIntensity: 1
-    - _TopLayerSmoothnessMax: 1
-    - _TopLayerSmoothnessMin: 0
     - _TopLayerUVScale: 50
-    - _TopLayerVPaintMaskIntensity: 0
     - _TopNoiseUVScale: 1
     - _TopNormalIntensity: 1
     - _TopOffset: 0.5

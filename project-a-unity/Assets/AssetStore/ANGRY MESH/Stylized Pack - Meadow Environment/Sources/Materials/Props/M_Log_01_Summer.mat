@@ -210,7 +210,7 @@ Material:
     - _TopLayerRoughnessIntensity: 1
     - _TopLayerSmoothnessIntensity: 1
     - _TopLayerSmoothnessMax: 1
-    - _TopLayerSmoothnessMin: 0
+    - _TopLayerSmoothnessMin: 1
     - _TopLayerUVScale: 5
     - _TopLayerVPaintMaskIntensity: 0
     - _TopNoiseUVScale: 1

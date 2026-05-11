@@ -156,6 +156,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AddPrecomputedVelocity: 1
     - _AlphaCutoff: 0.5
     - _BaseAOIntensity: 0.491
     - _BaseAlbedoBrightness: 1.17
@@ -170,11 +171,12 @@ Material:
     - _BaseRoughnessIntensity: 1
     - _BaseRoughnessOffset: 1.1
     - _BaseSmoothness: 0.2
-    - _BaseSmoothnessIntensity: 0.5
-    - _BaseSmoothnessMax: 2
+    - _BaseSmoothnessIntensity: 1
+    - _BaseSmoothnessMax: 1
     - _BaseSmoothnessMin: 0
     - _BaseSmoothnessOffset: 0.1
-    - _BaseSmoothnessWaves: 0.2
+    - _BaseSmoothnessVColorMask: 0
+    - _BaseSmoothnessWaves: 0.1
     - _BaseUVScale: 1
     - _BottomColorContrast: 2.48
     - _BottomColorOffset: 2.5
@@ -257,7 +259,7 @@ Material:
     - _BaseBottomColor: {r: 1, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
     - _BaseEmissiveColor: {r: 0, g: 0, b: 0, a: 1}
-    - _BottomColor: {r: 0.7254902, g: 0.7254902, b: 0.7254902, a: 1}
+    - _BottomColor: {r: 0.69419724, g: 0.7389017, b: 0.754717, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _TintColor: {r: 0.6037736, g: 0.5754763, b: 0.16233535, a: 0}
@@ -267,3 +269,4 @@ Material:
     - _Vector0: {r: 0, g: 0, b: 0, a: 0}
     - _Vector1: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

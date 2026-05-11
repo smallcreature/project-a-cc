@@ -1,0 +1,7 @@
+interface:
+  display_name: "Obsidian Wiki Agent"
+  short_description: "Turn raw notes into linked Obsidian wiki"
+  default_prompt: "Use $obsidian-wiki-agent to ingest raw technical text into the Obsidian wiki."
+
+policy:
+  allow_implicit_invocation: true

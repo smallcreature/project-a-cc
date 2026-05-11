@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.AI.Assistant.Editor:Unity.AI.Assistant.Editor:GatewayProjectSettings
   m_ProviderWorkingDirs:
-  - providerId: claude-code
-    workingDir: C:/projects/project-a-cc/project-a-unity/Claude
+  - providerId: codex
+    workingDir: C:/projects/project-a-cc
   m_IncludeDefaultAgentsMd: 1

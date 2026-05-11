@@ -29,7 +29,7 @@ Material:
   - _FLIPNORMALS_ON
   - _KEYWORD8_OFF
   - _TEST_ON
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -192,6 +192,8 @@ Material:
     - _ASP_GlobalTreeAO: 1
     - _ASP_GlobalTreeSSSAOInfluence: 1
     - _ASP_GlobalTreeSSSIntensity: 1
+    - _AddPrecomputedVelocity: 1
+    - _AlphaClip: 0
     - _AlphaCutoff: 0.5
     - _BaseAOIntensity: 0.491
     - _BaseAlbedoBrightness: 1
@@ -211,8 +213,8 @@ Material:
     - _BaseRoughnessOffset: 1.1
     - _BaseSSSAOInfluence: 0.9
     - _BaseSSSAmbiet: 0.1
-    - _BaseSSSDirect: 0.54
-    - _BaseSSSIntensity: 9.6
+    - _BaseSSSDirect: 0.5
+    - _BaseSSSIntensity: 19.1
     - _BaseSSSNormalDistortion: 0
     - _BaseSSSScattering: 20
     - _BaseSSSShadow: 0.95
@@ -382,9 +384,9 @@ Material:
     - _WindTreeFlexibility1: 1
     - _WindTreeScale: 0.5
     - _WindTreeSpeed: 5
+    - _XRMotionVectorsPass: 1
     - _ZWrite: 1
     - __dirty: 1
-    - _awdawdad: 0
     m_Colors:
     - _AAAA: {r: 0, g: 1, b: 0, a: 0}
     - _Axis: {r: 1, g: 0, b: 0, a: 0}

@@ -313,6 +313,7 @@ Material:
     - _TopLayerRoughnessIntensity: 1
     - _TopLayerSSSIntensity: 1
     - _TopLayerSmoothness: 0
+    - _TopLayerSmoothnessIntensity: 0
     - _TopLayerUVScale: 6.2
     - _TopNoiseUVScale: 1
     - _TopNormalIntensity: 1

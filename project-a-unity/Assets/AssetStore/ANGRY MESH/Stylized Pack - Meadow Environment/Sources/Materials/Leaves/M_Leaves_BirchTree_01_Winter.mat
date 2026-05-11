@@ -182,10 +182,10 @@ Material:
     - _BaseSSSIntensity: 1
     - _BaseSmoothness: 0.5
     - _BaseSmoothnessIntensity: 0.1
-    - _BaseSmoothnessMax: 1
+    - _BaseSmoothnessMax: 0.33
     - _BaseSmoothnessMin: 0
     - _BaseSmoothnessOffset: 0.5
-    - _BaseSmoothnessWaves: 0.5
+    - _BaseSmoothnessWaves: 0
     - _BaseTreeAOIntensity: 0.5
     - _BaseUVScale: 1
     - _BottomColorContrast: 3

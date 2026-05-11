@@ -162,6 +162,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AddPrecomputedVelocity: 1
     - _AlphaCutoff: 0.5
     - _BaseAOIntensity: 0.491
     - _BaseAlbedoBrightness: 1
@@ -181,11 +182,13 @@ Material:
     - _BaseSSSAOInfluence: 0.5
     - _BaseSSSIntensity: 1
     - _BaseSmoothness: 0.5
-    - _BaseSmoothnessIntensity: 0.1
-    - _BaseSmoothnessMax: 1
+    - _BaseSmoothnessAA: 0.5
+    - _BaseSmoothnessIntensity: 0.05
+    - _BaseSmoothnessMax: 0.33
     - _BaseSmoothnessMin: 0
     - _BaseSmoothnessOffset: 0.5
-    - _BaseSmoothnessWaves: 0.5
+    - _BaseSmoothnessVColorMask: 0
+    - _BaseSmoothnessWaves: 0
     - _BaseTreeAOIntensity: 0.5
     - _BaseUVScale: 1
     - _BottomColorContrast: 3
@@ -212,6 +215,7 @@ Material:
     - _EnableGlancingAngleCut: 0
     - _EnableGradientColor: 0
     - _EnableSecondColor: 0
+    - _EnableSmoothnessAnim: 0
     - _EnableSmoothnessWaves: 0
     - _EnableTintColor: 1
     - _EnableTintVariationColor: 0
@@ -284,7 +288,7 @@ Material:
     - _ZWrite: 1
     - __dirty: 1
     m_Colors:
-    - _BaseAlbedoColor: {r: 0.764151, g: 0.36759984, b: 0.075694196, a: 0}
+    - _BaseAlbedoColor: {r: 0.7176471, g: 0.34509805, b: 0.07058824, a: 0}
     - _BaseAlbedoColor1: {r: 0.8679245, g: 0.25792095, b: 0.25792095, a: 0.5019608}
     - _BaseAlbedoColor2: {r: 0.5520116, g: 0.41788515, b: 0.34191445, a: 0.5019608}
     - _BaseBottomColor: {r: 1, g: 0, b: 0, a: 0}
@@ -304,3 +308,4 @@ Material:
     - _TopLayerColor: {r: 0.7758225, g: 0.8387992, b: 0.9473069, a: 1}
     - _TopLayerSSSColor: {r: 0.783538, g: 0.921582, b: 1, a: 1}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
