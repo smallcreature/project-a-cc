@@ -2,9 +2,10 @@
 type: index
 status: draft
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-12
 sources:
   - "[[Project Arcane MVP Concept]]"
+  - "[[World Generator]]"
 tags:
   - index
 ---
@@ -14,10 +15,12 @@ tags:
 ## Sources
 
 - [[Project Arcane MVP Concept|Project Arcane MVP Concept]] - Notion concept/MVP document for Project Arcane survival, magic, progression, and USP. Sources: 1.
+- [[World Generator|World Generator]] - raw world generation design for voxel chunks, wrapping, biome-first terrain, caves, and surface replacement. Sources: 1.
 
 ## Entities
 
 - [[entities/Project Arcane|Project Arcane]] - survival-craft game about discovering and exploiting magic through research. Sources: 1.
+- [[entities/World Generator System|World Generator System]] - bounded wrapping voxel world generation/storage system. Sources: 1.
 
 ## Concepts
 
@@ -45,8 +48,17 @@ tags:
 - [[concepts/PvE Hunters|PvE Hunters]] - adaptive NPC threat and raids. Sources: 1.
 - [[concepts/Bosses And Points Of Interest|Bosses And Points Of Interest]] - bosses, dungeons, POIs, and unique research resources. Sources: 1.
 - [[concepts/Expeditions And Adventures|Expeditions And Adventures]] - exploration, POIs, bosses, dungeons, logistics. Sources: 1.
+- [[concepts/Voxel World|Voxel World]] - 1m editable block grid and block/air occupancy model. Sources: 1.
+- [[concepts/Chunked Voxel World|Chunked Voxel World]] - `16*512*16` chunk layout and max `256*256` horizontal chunk world. Sources: 1.
+- [[concepts/Horizontal World Wrapping|Horizontal World Wrapping]] - finite world with seamless toroidal X/Z boundaries. Sources: 1.
+- [[concepts/Terrain And Object Layers|Terrain And Object Layers]] - natural terrain blocks versus later placed object blocks. Sources: 1.
+- [[concepts/Biome-First World Generation|Biome-First World Generation]] - biome map as primary driver for terrain, height, and materials. Sources: 1.
+- [[concepts/Terrain Height Pipeline|Terrain Height Pipeline]] - ordered noise and spline modifiers for terrain shape. Sources: 1.
+- [[concepts/Cave Generation|Cave Generation]] - paired cheese/spaghetti 3D noise carving. Sources: 1.
+- [[concepts/Surface Block Replacement|Surface Block Replacement]] - stone-to-soil/grass pass with biome materials and steepness rules. Sources: 1.
 
 ## Synthesis
 
-- [[synthesis/Project Arcane System Map|Project Arcane System Map]] - linked overview of major system relationships. Sources: 1.
-- [[synthesis/Project Arcane Open Questions|Project Arcane Open Questions]] - unresolved design questions extracted from source. Sources: 1.
+- [[synthesis/Project Arcane System Map|Project Arcane System Map]] - linked overview of major system relationships. Sources: 2.
+- [[synthesis/Project Arcane Open Questions|Project Arcane Open Questions]] - unresolved design questions extracted from sources. Sources: 2.
+- [[synthesis/World Generation Pipeline|World Generation Pipeline]] - ordered map of biome, terrain, cave, surface, chunking, and wrapping decisions. Sources: 1.

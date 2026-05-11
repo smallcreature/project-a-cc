@@ -2,9 +2,10 @@
 type: synthesis
 status: draft
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-12
 sources:
   - "[[Project Arcane MVP Concept]]"
+  - "[[World Generator]]"
 tags:
   - questions
   - synthesis
@@ -56,3 +57,12 @@ tags:
 - How are rooms detected?
 - How do workstation bonuses communicate?
 - When do roads, outposts, transport, and portals enter progression?
+
+## World Generation
+
+- What exact storage model backs [[concepts/Chunked Voxel World|full-height voxel chunks]]: dense arrays, palette compression, octree, sparse deltas, or hybrid?
+- How is [[concepts/Horizontal World Wrapping|horizontal wrapping]] implemented across rendering, physics, AI, networking, saves, and interpolation?
+- What final math defines [[concepts/Terrain Height Pipeline|erosion, Peaks and Valleys, cliffs, and overhangs]]?
+- Should terrain generation be a heightfield plus 3D modifiers, or a single density function?
+- How are [[concepts/Cave Generation|cheese and spaghetti caves]] parameterized and combined?
+- How does [[concepts/Surface Block Replacement|surface replacement]] avoid turning cave walls or overhang undersides into soil/grass?

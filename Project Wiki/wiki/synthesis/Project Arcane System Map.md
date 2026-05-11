@@ -2,9 +2,10 @@
 type: synthesis
 status: draft
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-12
 sources:
   - "[[Project Arcane MVP Concept]]"
+  - "[[World Generator]]"
 tags:
   - map
   - synthesis
@@ -16,6 +17,12 @@ tags:
 ## High-Level Chain
 
 [[concepts/Survival Systems|Survival]] creates constraints -> [[concepts/Gathering|Gathering]], [[concepts/Farming|Farming]], [[concepts/Hunting|Hunting]], [[concepts/Cooking|Cooking]], and [[concepts/Storage And Stockpiles|Storage]] stabilize life -> [[concepts/Immersive Research|Research]] unlocks recipes and spells -> [[concepts/Magic System|Magic]] grants power and [[concepts/Magical Automation|automation]] -> stronger player reaches harder [[concepts/Expeditions And Adventures|expeditions/adventures]] and [[concepts/Bosses And Points Of Interest|bosses/POIs]] -> rare resources unlock deeper research.
+
+## World Chain
+
+[[entities/World Generator System|World generator]] creates [[concepts/Voxel World|editable voxel world]] -> [[concepts/Chunked Voxel World|chunks]] localize edits and streaming -> [[concepts/Horizontal World Wrapping|horizontal wrapping]] makes bounded world feel continuous -> [[concepts/Biome-First World Generation|biomes]] drive [[concepts/Terrain Height Pipeline|terrain shape]] -> [[concepts/Cave Generation|caves]] and [[concepts/Surface Block Replacement|surface replacement]] create exploration and readable biome surfaces.
+
+Relevant page: [[synthesis/World Generation Pipeline|World Generation Pipeline]].
 
 ## Magic Chain
 
@@ -41,3 +48,4 @@ Relevant page: [[concepts/Aberration And Corruption|Aberration And Corruption]].
 - Mining, mundane research, crafting, and leveling need full systems.
 - PvE hunter simulation depth is undefined.
 - MVP cut needs explicit scope.
+- World generation algorithms need exact implementation choices for storage, wrapping, erosion, Peaks and Valleys, cliffs, overhangs, caves, and surface steepness.

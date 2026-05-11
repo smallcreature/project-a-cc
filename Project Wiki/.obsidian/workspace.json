@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/concepts/Spellcasting.md",
+                "file": "wiki/sources/World Generator.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Spellcasting"
+              "title": "World Generator"
             }
           }
         ]
@@ -183,6 +183,11 @@
   },
   "active": "bcdc9628e522cbb7",
   "lastOpenFiles": [
+    "wiki/concepts/Voxel World.md",
+    "wiki/sources/World Generator.md",
+    "raw/2026-05-12 - World Generator.md",
+    "wiki/entities/World Generator System.md",
+    "wiki/concepts/Spellcasting.md",
     "wiki/concepts/Survival Systems.md",
     "wiki/concepts/Gathering.md",
     "wiki/sources/Project Arcane MVP Concept.md",
@@ -205,11 +210,6 @@
     "wiki/concepts/Aura And Magical Energies.md",
     "wiki/concepts/Aspects.md",
     "wiki/concepts/Magic System.md",
-    "wiki/concepts/Farming.md",
-    "wiki/concepts/Core USP.md",
-    "wiki/concepts/Bosses And Points Of Interest.md",
-    "wiki/concepts/Magical Automation.md",
-    "wiki/concepts/Specializations.md",
-    "wiki/concepts/Expeditions And Adventures.md"
+    "wiki/concepts/Farming.md"
   ]
 }
