@@ -10,6 +10,7 @@ namespace ProjectArcane.WorldGeneration
         public const int DefaultStoneId = 1;
         public const int DefaultSoilId = 2;
         public const int DefaultGrassId = 3;
+        public const int DefaultSandId = 4;
 
         [SerializeField] private List<BlockDefinition> blocks = new List<BlockDefinition>();
 
@@ -49,6 +50,11 @@ namespace ProjectArcane.WorldGeneration
             if (blockId == DefaultGrassId)
             {
                 return new Color32(76, 150, 74, 255);
+            }
+
+            if (blockId == DefaultSandId)
+            {
+                return new Color32(214, 188, 112, 255);
             }
 
             return new Color32(220, 80, 220, 255);
@@ -101,7 +107,8 @@ namespace ProjectArcane.WorldGeneration
             {
                 CreateTestBlock(DefaultStoneId, "stone", new Color32(118, 121, 124, 255)),
                 CreateTestBlock(DefaultSoilId, "soil", new Color32(116, 82, 52, 255)),
-                CreateTestBlock(DefaultGrassId, "grass", new Color32(76, 150, 74, 255))
+                CreateTestBlock(DefaultGrassId, "grass", new Color32(76, 150, 74, 255)),
+                CreateTestBlock(DefaultSandId, "sand", new Color32(214, 188, 112, 255))
             };
             registry.lookupDirty = true;
             return registry;

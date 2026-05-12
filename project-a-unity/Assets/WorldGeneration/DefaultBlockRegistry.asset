@@ -54,6 +54,7 @@ MonoBehaviour:
   - {fileID: 6970612704186827363}
   - {fileID: -3901363348063644647}
   - {fileID: -4527251041176016011}
+  - {fileID: 4810124259063387341}
 --- !u!114 &6970612704186827363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,4 +73,23 @@ MonoBehaviour:
   debugColor:
     serializedVersion: 2
     rgba: 4286347638
+  solid: 1
+--- !u!114 &4810124259063387341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e01cacdd48fefd4bbe8552e2fffa655, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectArcane.WorldGeneration.BlockDefinition
+  stableId: 4
+  stableKey: sand
+  defaultLayer: 1
+  debugColor:
+    serializedVersion: 2
+    rgba: 4285578454
   solid: 1

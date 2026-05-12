@@ -52,6 +52,7 @@ namespace ProjectArcane.WorldGeneration
                 }
 
                 biomes[i].BiomeId = i;
+                biomes[i].Validate();
             }
         }
 

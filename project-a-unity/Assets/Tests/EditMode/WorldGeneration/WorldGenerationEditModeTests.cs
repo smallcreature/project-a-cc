@@ -123,6 +123,42 @@ namespace ProjectArcane.Tests.EditMode.WorldGeneration
         }
 
         [Test]
+        public void WorldGenerator_ReplacesAirExposedSurfaceBelowSandHeightWithBiomeSand()
+        {
+            WorldGeneratorConfig config = WorldGeneratorConfig.CreateDefaultForTests();
+            BlockRegistry registry = BlockRegistry.CreateDefaultForTests();
+            try
+            {
+                config.ChunkCountX = 1;
+                config.ChunkCountZ = 1;
+                config.Continentalness = false;
+                config.Erosion = false;
+                config.PeaksAndValleys = false;
+                config.CliffsAndOverhangs = false;
+                config.Caves = false;
+
+                BiomeConfig biome = config.DefaultBiome;
+                biome.BaseHeight = 16f;
+                biome.HeightNoise.Enabled = false;
+                biome.SoilDepthRange = new Vector2Int(2, 2);
+                biome.SandBlockId = BlockRegistry.DefaultSandId;
+                biome.SandHeight = 16;
+
+                WorldGenerator generator = new WorldGenerator(config, registry);
+                WorldChunkData chunk = generator.GenerateChunk(new ChunkCoord(0, 0));
+
+                Assert.That(chunk.GetCellLocal(0, 17, 0).IsAir, Is.True);
+                Assert.That(chunk.GetCellLocal(0, 16, 0).BlockId, Is.EqualTo(BlockRegistry.DefaultSandId));
+                Assert.That(chunk.GetCellLocal(0, 15, 0).BlockId, Is.EqualTo(BlockRegistry.DefaultSoilId));
+            }
+            finally
+            {
+                Object.DestroyImmediate(registry);
+                Object.DestroyImmediate(config);
+            }
+        }
+
+        [Test]
         public void GreedyChunkMesher_CullsInteriorFaceForAdjacentSolidBlocks()
         {
             using (MeshTestFixture fixture = MeshTestFixture.Create())

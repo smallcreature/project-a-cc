@@ -17,6 +17,8 @@ namespace ProjectArcane.WorldGeneration
         [SerializeField] private int stoneBlockId = BlockRegistry.DefaultStoneId;
         [SerializeField] private int soilBlockId = BlockRegistry.DefaultSoilId;
         [SerializeField] private int grassBlockId = BlockRegistry.DefaultGrassId;
+        [SerializeField] private int sandBlockId = BlockRegistry.DefaultSandId;
+        [SerializeField] private int sandHeight = 64;
         [SerializeField] private Vector2Int soilDepthRange = new Vector2Int(3, 5);
         [SerializeField] private float steepnessThreshold = 10f;
         [SerializeField] private NoiseSettings heightNoise = NoiseSettings.Create(22f, 180f, 4, 101);
@@ -46,6 +48,8 @@ namespace ProjectArcane.WorldGeneration
         public int StoneBlockId { get => stoneBlockId; set => stoneBlockId = value; }
         public int SoilBlockId { get => soilBlockId; set => soilBlockId = value; }
         public int GrassBlockId { get => grassBlockId; set => grassBlockId = value; }
+        public int SandBlockId { get => sandBlockId == BlockRegistry.AirId ? BlockRegistry.DefaultSandId : sandBlockId; set => sandBlockId = value; }
+        public int SandHeight { get => sandHeight; set => sandHeight = Mathf.Clamp(value, 0, WorldDimensions.WorldHeight - 1); }
         public Vector2Int SoilDepthRange { get => soilDepthRange; set => soilDepthRange = value; }
         public float SteepnessThreshold { get => steepnessThreshold; set => steepnessThreshold = Mathf.Max(0f, value); }
         public NoiseSettings HeightNoise => heightNoise;
@@ -56,6 +60,17 @@ namespace ProjectArcane.WorldGeneration
         public NoiseSettings PeaksAndValleysNoise => peaksAndValleysNoise;
         public NoiseSettings CliffsAndOverhangsNoise => cliffsAndOverhangsNoise;
         public CaveSettings Caves => caves;
+
+        public void Validate()
+        {
+            baseHeight = Mathf.Clamp(baseHeight, 0f, WorldDimensions.WorldHeight - 1);
+            mapWeight = Mathf.Max(0f, mapWeight);
+            mapThreshold = Mathf.Clamp01(mapThreshold);
+            mapBlend = Mathf.Clamp(mapBlend, 0.001f, 0.5f);
+            sandBlockId = SandBlockId;
+            sandHeight = Mathf.Clamp(sandHeight, 0, WorldDimensions.WorldHeight - 1);
+            steepnessThreshold = Mathf.Max(0f, steepnessThreshold);
+        }
 
         public BiomeConfig Clone()
         {
@@ -72,6 +87,8 @@ namespace ProjectArcane.WorldGeneration
                 stoneBlockId = stoneBlockId,
                 soilBlockId = soilBlockId,
                 grassBlockId = grassBlockId,
+                sandBlockId = SandBlockId,
+                sandHeight = sandHeight,
                 soilDepthRange = soilDepthRange,
                 steepnessThreshold = steepnessThreshold,
                 heightNoise = heightNoise.Clone(),

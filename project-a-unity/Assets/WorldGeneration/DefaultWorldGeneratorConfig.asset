@@ -43,6 +43,8 @@ MonoBehaviour:
     stoneBlockId: 1
     soilBlockId: 2
     grassBlockId: 3
+    sandBlockId: 4
+    sandHeight: 64
     soilDepthRange: {x: 3, y: 5}
     steepnessThreshold: 10
     heightNoise:

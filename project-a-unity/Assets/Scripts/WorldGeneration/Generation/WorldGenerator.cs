@@ -246,6 +246,7 @@ namespace ProjectArcane.WorldGeneration
 
                     int minDepth = Mathf.Min(biome.SoilDepthRange.x, biome.SoilDepthRange.y);
                     int maxDepth = Mathf.Max(biome.SoilDepthRange.x, biome.SoilDepthRange.y);
+                    int sandHeight = Mathf.RoundToInt(SampleWeightedValue(column.Weights, b => b.SandHeight));
                     int depth = Mathf.Clamp(Mathf.RoundToInt(Mathf.Abs(PeriodicNoise.Sample2D(biome.HeightNoise, config.Seed + 701, chunk.Coord.X * 16 + localX, chunk.Coord.Z * 16 + localZ, dimensions))), 0, 1024);
                     depth = minDepth + (maxDepth <= minDepth ? 0 : depth % (maxDepth - minDepth + 1));
 
@@ -263,7 +264,18 @@ namespace ProjectArcane.WorldGeneration
                             break;
                         }
 
-                        int blockId = offset == 0 && surfaceY >= Mathf.FloorToInt(column.BaseHeight) ? biome.GrassBlockId : biome.SoilBlockId;
+                        bool airExposedSurface = offset == 0 && chunk.GetCellLocal(localX, y + 1, localZ).IsAir;
+                        bool useSand = airExposedSurface && y <= sandHeight;
+                        int blockId = biome.SoilBlockId;
+                        if (useSand)
+                        {
+                            blockId = biome.SandBlockId;
+                        }
+                        else if (offset == 0 && surfaceY >= Mathf.FloorToInt(column.BaseHeight))
+                        {
+                            blockId = biome.GrassBlockId;
+                        }
+
                         chunk.SetCellLocal(localX, y, localZ, new CellState(blockId, BlockLayer.Terrain));
                     }
                 }
