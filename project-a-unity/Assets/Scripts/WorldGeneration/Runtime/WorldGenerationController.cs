@@ -156,7 +156,7 @@ namespace ProjectArcane.WorldGeneration
                     filter.sharedMesh = mesh;
                     renderer.sharedMaterial = GetDebugMaterial();
                     renderer.shadowCastingMode = ShadowCastingMode.On;
-                    renderer.receiveShadows = true;
+                    renderer.receiveShadows = false;
                 }
             }
         }

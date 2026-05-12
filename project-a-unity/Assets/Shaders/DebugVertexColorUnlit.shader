@@ -17,10 +17,7 @@ Shader "ProjectArcane/Debug/VertexColorLit"
             HLSLPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-            #pragma multi_compile _ _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _MAIN_LIGHT_SHADOWS_SCREEN
             #pragma multi_compile _ _ADDITIONAL_LIGHTS_VERTEX _ADDITIONAL_LIGHTS
-            #pragma multi_compile_fragment _ _ADDITIONAL_LIGHT_SHADOWS
-            #pragma multi_compile_fragment _ _SHADOWS_SOFT
             #pragma multi_compile_fog
 
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
@@ -38,8 +35,7 @@ Shader "ProjectArcane/Debug/VertexColorLit"
                 float4 positionHCS : SV_POSITION;
                 float3 positionWS : TEXCOORD0;
                 half3 normalWS : TEXCOORD1;
-                float4 shadowCoord : TEXCOORD2;
-                half fogFactor : TEXCOORD3;
+                half fogFactor : TEXCOORD2;
                 float4 color : COLOR;
             };
 
@@ -52,7 +48,6 @@ Shader "ProjectArcane/Debug/VertexColorLit"
                 output.positionHCS = positionInputs.positionCS;
                 output.positionWS = positionInputs.positionWS;
                 output.normalWS = NormalizeNormalPerVertex(normalInputs.normalWS);
-                output.shadowCoord = GetShadowCoord(positionInputs);
                 output.fogFactor = ComputeFogFactor(positionInputs.positionCS.z);
                 output.color = input.color;
                 return output;
@@ -64,9 +59,9 @@ Shader "ProjectArcane/Debug/VertexColorLit"
                 half3 albedo = input.color.rgb;
                 half3 litColor = albedo * SampleSH(normalWS);
 
-                Light mainLight = GetMainLight(input.shadowCoord);
+                Light mainLight = GetMainLight();
                 half mainNdotL = saturate(dot(normalWS, mainLight.direction));
-                litColor += albedo * mainLight.color * mainNdotL * mainLight.distanceAttenuation * mainLight.shadowAttenuation;
+                litColor += albedo * mainLight.color * mainNdotL * mainLight.distanceAttenuation;
 
                 #ifdef _ADDITIONAL_LIGHTS
                 uint lightCount = GetAdditionalLightsCount();
@@ -74,7 +69,7 @@ Shader "ProjectArcane/Debug/VertexColorLit"
                 {
                     Light light = GetAdditionalLight(lightIndex, input.positionWS);
                     half ndotl = saturate(dot(normalWS, light.direction));
-                    litColor += albedo * light.color * ndotl * light.distanceAttenuation * light.shadowAttenuation;
+                    litColor += albedo * light.color * ndotl * light.distanceAttenuation;
                 }
                 #endif
 
