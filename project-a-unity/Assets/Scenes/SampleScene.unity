@@ -466,7 +466,7 @@ MonoBehaviour:
   debugMaterial: {fileID: 2100000, guid: d117c25f3983ae44f94b322c277389df, type: 2}
   centerChunkX: 0
   centerChunkZ: 0
-  debugRadius: 8
+  debugRadius: 32
   debugYMin: 0
   debugYMax: 511
   renderSectionHeight: 32

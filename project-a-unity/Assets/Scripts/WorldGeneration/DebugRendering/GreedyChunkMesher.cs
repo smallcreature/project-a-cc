@@ -12,6 +12,19 @@ namespace ProjectArcane.WorldGeneration
         public int QuadCount;
 
         public bool IsEmpty => Triangles.Count == 0;
+
+        public GreedyMeshData(int estimatedQuads = 0)
+        {
+            if (estimatedQuads <= 0)
+            {
+                return;
+            }
+
+            Vertices.Capacity = estimatedQuads * 4;
+            Triangles.Capacity = estimatedQuads * 6;
+            Colors.Capacity = estimatedQuads * 4;
+            Normals.Capacity = estimatedQuads * 4;
+        }
     }
 
     public sealed class GreedyChunkMesher

@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: DefaultWorldGeneratorConfig
   m_EditorClassIdentifier: Assembly-CSharp::ProjectArcane.WorldGeneration.WorldGeneratorConfig
   seed: 12345
-  chunkCountX: 32
-  chunkCountZ: 32
+  chunkCountX: 128
+  chunkCountZ: 128
   stageToggles:
     Continentalness: 1
     Erosion: 0
     PeaksAndValleys: 0
     CliffsAndOverhangs: 0
-    Caves: 0
+    Caves: 1
   biomes:
   - name: Default
     biomeId: 0
@@ -44,39 +44,45 @@ MonoBehaviour:
     soilBlockId: 2
     grassBlockId: 3
     sandBlockId: 4
-    sandHeight: 64
+    sandHeight: 126
     soilDepthRange: {x: 3, y: 5}
     steepnessThreshold: 10
     heightNoise:
       enabled: 1
-      intensity: 22
+      intensity: 2
       contrast: 1
       size: 180
-      octaves: 4
+      octaves: 2
       persistence: 0.5
       lacunarity: 2
       seedOffset: 101
     continentalnessNoise:
       enabled: 1
       intensity: 1
-      contrast: 1
-      size: 80
-      octaves: 2
+      contrast: 0.8
+      size: 600
+      octaves: 4
       persistence: 0.5
       lacunarity: 2
-      seedOffset: 151
+      seedOffset: 0
     continentalnessSpline:
       points:
       - Input: -1
-        Output: -42
-      - Input: -0.15
-        Output: -12
-      - Input: 0.35
-        Output: 22
+        Output: -32
+      - Input: -0.4
+        Output: 0
+      - Input: 0.3
+        Output: 8
+      - Input: 0.4
+        Output: 12
+      - Input: 0.6
+        Output: 16
+      - Input: 0.8
+        Output: 24
       - Input: 1
-        Output: 72
+        Output: 48
     erosionNoise:
-      enabled: 1
+      enabled: 0
       intensity: 1
       contrast: 1
       size: 300
@@ -93,16 +99,16 @@ MonoBehaviour:
       - Input: 1
         Output: -24
     peaksAndValleysNoise:
-      enabled: 1
-      intensity: 18
-      contrast: 1
-      size: 240
+      enabled: 0
+      intensity: 24
+      contrast: 0.8
+      size: 128
       octaves: 4
       persistence: 0.5
       lacunarity: 2
       seedOffset: 271
     cliffsAndOverhangsNoise:
-      enabled: 1
+      enabled: 0
       intensity: 18
       contrast: 1
       size: 90
@@ -122,7 +128,7 @@ MonoBehaviour:
         lacunarity: 2
         seedOffset: 401
       spaghettiNoise:
-        enabled: 1
+        enabled: 0
         intensity: 1
         contrast: 1
         size: 42

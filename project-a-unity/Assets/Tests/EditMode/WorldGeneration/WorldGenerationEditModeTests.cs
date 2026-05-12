@@ -175,6 +175,31 @@ namespace ProjectArcane.Tests.EditMode.WorldGeneration
             }
         }
 
+        [Test]
+        public void FastVoxelChunkMesher_CullsInteriorFaceForAdjacentSolidBlocks()
+        {
+            BlockRegistry registry = BlockRegistry.CreateDefaultForTests();
+            try
+            {
+                WorldChunkData singleBlockChunk = WorldChunkData.CreateForTests(new ChunkCoord(0, 0));
+                singleBlockChunk.SetCellLocal(0, 10, 0, new CellState(BlockRegistry.DefaultStoneId, BlockLayer.Terrain));
+
+                WorldChunkData adjacentPairChunk = WorldChunkData.CreateForTests(new ChunkCoord(0, 0));
+                adjacentPairChunk.SetCellLocal(0, 10, 0, new CellState(BlockRegistry.DefaultStoneId, BlockLayer.Terrain));
+                adjacentPairChunk.SetCellLocal(1, 10, 0, new CellState(BlockRegistry.DefaultStoneId, BlockLayer.Terrain));
+
+                GreedyMeshData singleBlockMesh = FastVoxelChunkMesher.BuildMeshData(singleBlockChunk, 0, 32, registry);
+                GreedyMeshData adjacentPairMesh = FastVoxelChunkMesher.BuildMeshData(adjacentPairChunk, 0, 32, registry);
+
+                Assert.That(singleBlockMesh.QuadCount, Is.EqualTo(6));
+                Assert.That(adjacentPairMesh.QuadCount, Is.EqualTo(10));
+            }
+            finally
+            {
+                Object.DestroyImmediate(registry);
+            }
+        }
+
         private sealed class GeneratedWorld : IDisposable
         {
             private readonly List<Object> objectsToDestroy = new List<Object>();

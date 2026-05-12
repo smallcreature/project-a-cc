@@ -112,13 +112,14 @@ namespace ProjectArcane.WorldGeneration
             debugRoot = new GameObject("World Debug Visualization");
             debugRoot.hideFlags = DebugObjectHideFlags;
             debugRoot.transform.SetParent(transform, false);
-            ControllerBlockSampler sampler = new ControllerBlockSampler(this);
             int yMin = Mathf.Min(DebugYMin, DebugYMax);
             int yMaxExclusive = Mathf.Clamp(Mathf.Max(DebugYMin, DebugYMax) + 1, yMin + 1, WorldDimensions.WorldHeight);
+            BlockRegistry registry = GetRegistry();
 
             for (int i = 0; i < visibleChunks.Count; i++)
             {
                 VisibleChunk visible = visibleChunks[i];
+                WorldChunkData chunk = GetOrGenerateChunk(visible.LogicalCoord);
                 GameObject chunkObject = new GameObject($"Chunk {visible.LogicalCoord.X},{visible.LogicalCoord.Z}");
                 chunkObject.hideFlags = DebugObjectHideFlags;
                 chunkObject.transform.SetParent(debugRoot.transform, false);
@@ -130,7 +131,7 @@ namespace ProjectArcane.WorldGeneration
                 for (int y = yMin; y < yMaxExclusive; y += RenderSectionHeight)
                 {
                     int sectionEnd = Mathf.Min(y + RenderSectionHeight, yMaxExclusive);
-                    GreedyMeshData meshData = GreedyChunkMesher.BuildMeshData(sampler, visible.LogicalCoord, y, sectionEnd, GetRegistry());
+                    GreedyMeshData meshData = FastVoxelChunkMesher.BuildMeshData(chunk, y, sectionEnd, registry, GetOrGenerateChunk);
                     if (meshData.IsEmpty)
                     {
                         continue;
@@ -306,19 +307,5 @@ namespace ProjectArcane.WorldGeneration
             }
         }
 
-        private sealed class ControllerBlockSampler : IWorldBlockSampler
-        {
-            private readonly WorldGenerationController controller;
-
-            public ControllerBlockSampler(WorldGenerationController controller)
-            {
-                this.controller = controller;
-            }
-
-            public CellState GetCell(int worldX, int y, int worldZ)
-            {
-                return controller.GetCellAtWorld(worldX, y, worldZ);
-            }
-        }
     }
 }
